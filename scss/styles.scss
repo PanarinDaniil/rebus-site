@@ -889,8 +889,10 @@ body{
 		padding:21px 0 72px;
 	}
 	.content{
-		max-width:100%;
-		padding:0 15px;
+		max-width:830px;
+		@media (max-width:800px) {
+			max-width:100%;
+		}
 	}
 	.testimonial-slider{
 	    -webkit-touch-callout: text;

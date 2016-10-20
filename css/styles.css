@@ -1142,8 +1142,12 @@ body {
   }
 }
 .testimon-wrap .content {
-  max-width: 100%;
-  padding: 0 15px;
+  max-width: 830px;
+}
+@media (max-width: 800px) {
+  .testimon-wrap .content {
+    max-width: 100%;
+  }
 }
 .testimon-wrap .testimonial-slider {
   -webkit-touch-callout: text;
