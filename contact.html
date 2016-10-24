@@ -97,7 +97,7 @@
 							<div class="info">Rebus Web Services, Ney york City</div>
 							<div class="info">817 Broadway 5th Floor, New York, N.Y. 10003</div>
 							<div class="info show-mob"><span class="left">Tel: 1-347-866-6247</span><span class="right">E-mail: <a href="mailto:info@rebussoft.com">info@rebussoft.com</a></span></div>
-							<div id="rebus" class="map"></div>
+							<div id="rebus" class="map js_map"></div>
 						</div>
 						<div class="contacts-box">
 							<div class="title">Email Us for a Free Consultation</div>
@@ -163,8 +163,8 @@
 	    function init() {
 	        var mapOptions = {
 	            center: new google.maps.LatLng(40.733726,-73.991602),
-	            zoom: 17,
-	            zoomControl: false,
+	            zoom: 14,
+	            zoomControl: true,
 	            disableDoubleClickZoom: false,
 	            mapTypeControl: false,
 	            scaleControl: false,
@@ -217,10 +217,10 @@
 				    };
 		        }());
 	        	iw = new google.maps.InfoWindow();
-	        	var html= "<div style='color:#000;background-color:#fff;padding:5px;width:200px;margin:0 auto;'><h4>"+title+"</h4><p>"+desc+"<p><p>"+telephone+"<p><a href='mailto:"+email+"' >"+email+"<a><a href='"+link+"'' >"+web+"<a></div>";
-				iw = new google.maps.InfoWindow({content:html});
-				iw.open(map,marker);
-				infoWindowVisible(true);
+	   //      	var html= "<div style='color:#000;background-color:#fff;padding:5px;width:200px;margin:0 auto;'><h4>"+title+"</h4><p>"+desc+"<p><p>"+telephone+"<p><a href='mailto:"+email+"' >"+email+"<a><a href='"+link+"'' >"+web+"<a></div>";
+				// iw = new google.maps.InfoWindow({content:html});
+				// iw.open(map,marker);
+				// infoWindowVisible(true);
 				google.maps.event.addListener(marker, 'click', function() {
 					if (infoWindowVisible()) {
 						iw.close();

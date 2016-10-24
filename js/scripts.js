@@ -139,39 +139,41 @@ $(document).ready(function() {
             }
         });
     }
-    $(".contact-form").validate({
-        rules: {
-            con_name: {
-                required: true,
-            },
-            con_email: {
-                required: true,
-                email: true
-            },
-            con_phone: {
-                required: true,
-                minlength:10
-            }
+    if ( $(".contact-form").width() > 0) {
+        $(".contact-form").validate({
+            rules: {
+                con_name: {
+                    required: true,
+                },
+                con_email: {
+                    required: true,
+                    email: true
+                },
+                con_phone: {
+                    required: true,
+                    minlength:10
+                }
 
-        },
-        messages: {
-            email: "Please enter a valid email address"
-        },
-        submitHandler: function() { 
-            $(".fail").removeClass("valid");
-            $(".success").addClass("valid");
-        },
-        invalidHandler: function(event, validator) {
-            var errors = validator.numberOfInvalids();
-            if (errors) {
-                $(".success").removeClass("valid");
-                $(".fail").addClass("valid");
-            } else {
+            },
+            messages: {
+                email: "Please enter a valid email address"
+            },
+            submitHandler: function() { 
                 $(".fail").removeClass("valid");
                 $(".success").addClass("valid");
+            },
+            invalidHandler: function(event, validator) {
+                var errors = validator.numberOfInvalids();
+                if (errors) {
+                    $(".success").removeClass("valid");
+                    $(".fail").addClass("valid");
+                } else {
+                    $(".fail").removeClass("valid");
+                    $(".success").addClass("valid");
+                }
             }
-        }
-    });
+        });
+    }
 
     $('.not_req').keypress(function() {
         if ($(this).length) {
