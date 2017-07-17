@@ -2002,10 +2002,10 @@ p {
   align-items: center;
   position: static;
   margin-bottom: 20px;
-  -moz-transition: all 0.4s linear;
-  -o-transition: all 0.4s linear;
-  -webkit-transition: all 0.4s linear;
-  transition: all 0.4s linear;
+  -moz-transition: all 0.2s linear;
+  -o-transition: all 0.2s linear;
+  -webkit-transition: all 0.2s linear;
+  transition: all 0.2s linear;
 }
 @media screen and (max-width: 800px) {
   .portfolio-box.inner {
@@ -2036,7 +2036,7 @@ p {
   order: 1;
 }
 .portfolio-box.inner.info-left .image-back:before {
-  right: 0px;
+  right: -2px;
 }
 .portfolio-box.inner.info-left .content-box {
   order: 2;
@@ -2054,7 +2054,7 @@ p {
 .portfolio-box.inner.info-right .image-back:before {
   top: -1px;
   bottom: -1px;
-  left: 0px;
+  left: -2px;
   -moz-transform: rotate(180deg);
   -ms-transform: rotate(180deg);
   -webkit-transform: rotate(180deg);
